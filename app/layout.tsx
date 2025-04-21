@@ -27,6 +27,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header className="w-full h-24 border-b border-gray-200 flex">
+          <div className="w-1/6 h-full bg-blue-500 text-white font-bold text-3xl flex items-center justify-center">
+            Chain Maker
+          </div>
+          <div className="w-5/6 h-full font-bold text-3xl flex items-center justify-start"></div>
+        </header>
         {children}
       </body>
     </html>
