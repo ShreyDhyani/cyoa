@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/utils";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,10 +26,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-screen h-screen flex flex-col`}
       >
-        <header className="w-full h-24 border-b border-gray-200 flex">
-          <div className="w-1/6 h-full bg-blue-500 text-white font-bold text-3xl flex items-center justify-center">
+        <header className={cn("w-full h-24 border-b flex", "border-gray-200 ")}>
+          <div
+            className={cn(
+              "w-1/6 h-full font-bold text-3xl flex items-center justify-center",
+              "bg-blue-500 text-white"
+            )}
+          >
             Chain Maker
           </div>
           <div className="w-5/6 h-full font-bold text-3xl flex items-center justify-start"></div>
